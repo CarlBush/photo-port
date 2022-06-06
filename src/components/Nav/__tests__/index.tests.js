@@ -13,4 +13,27 @@ describe("Nav component", () => {
     it("renders", () => {
         render(<Nav/>);
     });
+
+    //SECOND TEST| COMPARE PUBLISHED VERSION
+    it("matches snapshot", () => {
+        const { asFragment } = render(<Nav/>);
+        expect(asFragment()).toMatchSnapshot();
+    });
+});
+
+//TEST FOR CAMERA EMOJI IS VISIBLE
+describe("emoji is visible", () => {
+    it("insert emoji into the h2", () => {
+        const { getByLabelText } = render(<Nav/>);
+        expect(getByLabelText("camera")).toHaveTextContent("📸");
+    });
+});
+
+//TEST FOR LINK VISIBLITY
+describe("links are visible", () => {
+    it("insert text into the links", () => {
+        const { getByTestId } = render(<Nav/>);
+        expect(getByTestId("link")).toHaveTextContent("Oh Snap!");
+        expect(getByTestId("about")).toHaveTextContent("About me");
+    });
 });
