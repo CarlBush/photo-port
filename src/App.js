@@ -3,13 +3,15 @@
 import './App.css';
 import About from "../src/components/About/index";
 import Nav from "../src/components/Nav/index";
+import Gallery from "../src/components/Gallery/index";
 
 function App() {
   return(
     <div>
+      <Nav></Nav>
       <main>
+        <Gallery></Gallery>
         <About></About>
-        <Nav></Nav>
       </main>
     </div>
   );
