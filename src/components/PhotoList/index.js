@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 const PhotoList = ({ category }) => {
     //function PhotoList() {
     const [photos] = useState([
@@ -105,6 +107,7 @@ const PhotoList = ({ category }) => {
     return (
         <div>
             <div className="flex-row">
+                {console.log("photolist")}
                 {currentPhotos.map((image, i) => (
                     <img
                         src={require(`../../assets/small/${category}/${i}.jpg`).default}
