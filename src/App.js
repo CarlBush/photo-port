@@ -1,10 +1,11 @@
 //import React from "react";
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import React, { useState } from "react";
 import About from "../src/components/About/index";
 import Nav from "../src/components/Nav/index";
 import Gallery from "../src/components/Gallery/index";
+
 
 function App() {
   const [categories] = useState([
@@ -36,7 +37,7 @@ function App() {
       currentCategory={currentCategory}
       ></Nav>
       <main>
-        <Gallery></Gallery>
+        <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
     </div>
