@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "../Modal";
 
+//TESTING TO PUBLISH
 function PhotoList({ category }) {
     const [photos] = useState([
         {
